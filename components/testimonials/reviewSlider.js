@@ -111,7 +111,7 @@ export default function ReviewSlider() {
             <ItemGrid>
               <Image
                 height={100}
-                width={100}
+                width={2000}
                 className="slider-img"
                 src="/calgary-boudoir-joy-review.jpg"
                 alt="calgary boudoir photography google review"
@@ -124,7 +124,7 @@ export default function ReviewSlider() {
             <ItemGrid>
               <Image
                 height={100}
-                width={100}
+                width={2000}
                 className="slider-img"
                 src="/calgary-boudoir-kb-review.jpg"
                 alt="calgary boudoir photography google review"
@@ -138,7 +138,7 @@ export default function ReviewSlider() {
             <ItemGrid>
               <Image
                 height={100}
-                width={100}
+                width={2000}
                 className="slider-img"
                 src="/calgary-boudoir-photography-robin.jpg"
                 alt="calgary boudoir photography google review"

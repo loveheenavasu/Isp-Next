@@ -113,6 +113,8 @@ export default function MeetMark() {
               className="stretch"
               height={100}
               width={100}
+              layout="responsive"
+              style={{maxWidth:'100%', height:'auto', borderRadius:'5px'}}
               src="/mark-nude-boudoir-photographer-calgary.gif"
               alt="nude and boudoir photographer in calgary, AB"
             />
@@ -128,7 +130,8 @@ export default function MeetMark() {
               <Image
                 className="stretch"
                 height={100}
-                width={100}
+                width={400}
+                style={{width:'100%', height:'auto', borderRadius:'5px'}}
                 src="/mark-nude-boudoir-photographer-calgary.gif"
                 alt="nude and boudoir photographer in calgary, AB"
               />

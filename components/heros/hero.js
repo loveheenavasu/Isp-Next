@@ -65,7 +65,7 @@ const Text = styled.div`
 const Video = styled.div`
   @media screen and (max-width: 48em) {
     p {
-      display: none;
+     color:var(--clr-dark);
     }
   }
   // iframe {

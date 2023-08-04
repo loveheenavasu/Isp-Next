@@ -19,7 +19,7 @@ export default function Investment() {
             className="img-left"
             src="/calgary-boudoir-photography-cost.png"
             alt="calgary boudoir photography cost"
-            width={100}
+            width={870}
             height={100}
           />
           <TextBoxRight className="spacing text-right">
@@ -84,7 +84,7 @@ export default function Investment() {
               className="img-right"
               src="/included-with-boudoir-sessions-calgary.jpg"
               alt="what's included with our calgary boudoir session"
-              width={100}
+              width={720}
               height={100}
             />
           </WrapperTextLeft>
@@ -93,9 +93,9 @@ export default function Investment() {
           <WrapperTextRight>
             <Image
               className="img-left"
-              src="special-boudoir-add-ons-calgary.jpg"
+              src="/special-boudoir-add-ons-calgary.jpg"
               alt="special boudoir add ons calgary"
-              width={100}
+              width={795}
               height={100}
             />
             <TextBoxRight className="spacing text-right">

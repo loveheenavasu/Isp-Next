@@ -12,8 +12,6 @@ const BottomWrapper = styled.div`
     grid-column: 1 / -1;
     z-index: 1;
     min-height: 800px;
-    height: 100%;
-    width: 100%;
     object-fit: cover;
   }
 `;
@@ -47,10 +45,10 @@ export default function WhatToDo() {
         <Flex>
           <BottomWrapper>
             <Image
-              class="img-top"
+              className="img-top"
               src="/bound-boudoir-photography-book-in-calgary-2.jpg"
               alt="bound book of boudoir photography session"
-              width={100}
+              width={600}
               height={100}
             />
             <TextBox>
@@ -64,10 +62,10 @@ export default function WhatToDo() {
           </BottomWrapper>
           <BottomWrapper>
             <Image
-              class="img-top"
+              className="img-top"
               src="/boudoir-wall-art-in-calgary-3.jpg"
               alt="wall art of boudoir photography session"
-              width={100}
+              width={600}
               height={100}
             />
             <TextBox>

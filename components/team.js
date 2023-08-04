@@ -21,10 +21,7 @@ const Wrapper = styled.div`
   .headshot-img-desktop {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     border: 2px solid var(--clr-accent);
-    height: 300px;
-    width: 400px;
-    object-fit: cover;
-    object-position: top;
+ 
   }
   // .headshot-img-mobile {
   //   display: none;
@@ -67,7 +64,8 @@ const TeamMember = (props) => {
           src={props.img}
           alt={props.alt}
           height={100}
-          width={100}
+          width={300}
+          style={{height:'300px', objectFit:'cover'}}
         />
         <Text>
           <div>

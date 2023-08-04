@@ -159,7 +159,7 @@ export default function HowItWorks() {
             className="img-right"
             src="/your-boudoir-experience-awaits.jpg"
             alt="how your boudoir experience works"
-            width={100}
+            width={350}
             height={100}
             objectFit="contain"
           />

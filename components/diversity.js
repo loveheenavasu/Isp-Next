@@ -24,7 +24,8 @@ export default function Diversity() {
         <Flex>
           <Image
             height={100}
-            width={100}
+            width={600}
+            style={{objectFit:'cover'}}
             src="/diversity-for-boudoir-photography-calgary.jpg"
             alt="diversity and LGBTQ+ boudoir photography in calgary, ab"
             className="stretch"

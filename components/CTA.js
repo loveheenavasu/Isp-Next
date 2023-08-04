@@ -19,6 +19,7 @@ const Flex = styled.div`
   align-items: center;
   img {
     /* width: 100%; */
+    position:relative !important
   }
   @media screen and (max-width: 57em) {
     flex-direction: column;
@@ -55,7 +56,7 @@ export default function CTA(props) {
             <Image
               className="stretch cta-image"
               fill={true}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius:'5px', border:'1px solid white' }}
               src="/book-your-calgary-boudoir-session.jpg"
               alt="calgary boudoir session"
             />
