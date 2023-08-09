@@ -11,7 +11,7 @@ import Breadcrumb2Links from "../breadcrumbs/breadcrumb2links";
 import Image from "next/image";
 
 const Wrapper = styled.div`
-  background: var(--clr-dark);
+  background: var(--clr-black);
   padding-bottom: 4em;
   border-bottom: 8px solid var(--clr-light);
 
@@ -107,7 +107,7 @@ export default function BannerBooking(props) {
         <Image
           className="stretch clip-img "
           height={100}
-          width={100}
+          width={580}
           src={props.img}
           alt={props.alt}
         />

@@ -52,10 +52,10 @@ export default function BeyondSexy() {
           </TextBox>
         </Container>
         <Image
-          class="bottom-img"
+          className="bottom-img"
           src="/beyond-sexy-nude-photos.jpg"
           alt="we go beyond taking just sexy nude photos"
-          width={100}
+          width={1500}
           height={100}
         />
       </Wrapper>

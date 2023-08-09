@@ -88,11 +88,11 @@ export default function MercedesTestimonial(props) {
       <Container>
         <Wrapper>
           <Image
-            class="review-img"
+            className="review-img"
             src="/calgary-boudoir-mercedes-review.jpg"
             alt="review of calgary boudoir photographer"
-            height={100}
-            width={100}
+            height={2000}
+            width={2000}
           />
           <ReviewBox review={props.review} name={props.name} />
         </Wrapper>

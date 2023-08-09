@@ -75,9 +75,6 @@ export const Flex = styled.div`
     flex-direction: column;
   }
 
-  & > * {
-    width: 100%;
-  }
 
   & > * + * {
     margin-left: 2em;

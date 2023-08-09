@@ -1,30 +1,259 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import { EXAMPLE_PATH } from "../lib/constants";
+import Image from "next/image";
+import styled from "styled-components";
+import { Container } from "./layoutComponents";
+import { Icon } from "@chakra-ui/react";
+import { PhoneIcon, AtSignIcon, TimeIcon } from "@chakra-ui/icons";
+import {
+  IoLogoPinterest,
+  IoLogoInstagram,
+  IoLogoTwitter,
+  IoLogoFacebook,
+  IoLogoLinkedin,
+  IoLogoYoutube,
+} from "react-icons/io";
+import Link from "next/link";
 
+const LinkBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  color: white;
+  margin-top: var(--spacer-lg);
+  margin-bottom: 25px;
+
+  @media (max-width: 768px) { 
+    grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  }
+}
+`;
+const HeadingTag = styled.h3`
+  margin-bottom: 15px;
+`;
+
+const NextLink = ({ children, href }) => {
+  return (
+    <Link style={{ color: "white", textDecoration: "underline" }} href={href}>
+      {children}
+    </Link>
+  );
+};
+const LinkElement = styled.div``;
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+    <>
+      <footer
+        className="bg-accent-1 border-t border-accent-2"
+        style={{ backgroundColor: "var( --clr-black)", padding: "10px 0" }}
+      >
+        <div className="footer-logo">
+          <Image
+            width={200}
+            height={100}
+            src="/logo-white.svg"
+            alt="footer logo"
+            style={{ margin: "0 auto", padding: "15px 0px" }}
+          />
         </div>
-      </Container>
-    </footer>
-  )
+        <hr
+          style={{
+            backgroundColor: "var(--clr-red)",
+            width: "80%",
+            margin: "0 auto",
+          }}
+        />
+        <Container>
+          <LinkBox className="footer-links">
+            <div className="contact-box">
+              <HeadingTag>Contact Us</HeadingTag>
+              <p>
+                <PhoneIcon mr={"10px"} />
+                +1 (403) 252-2662
+              </p>
+              <p>
+                <AtSignIcon mr={"10px"} />
+                info@innerspiritphoto.com
+              </p>
+              <p>
+                <TimeIcon mr={"10px"} mt={"10px"} />
+                10:00 AM - 7:00 PM Monday to Friday
+                <br />
+                <span style={{ fontSize: "20px", marginLeft: "22px" }}>
+                  Hours by appointment
+                </span>
+              </p>
+
+              <p style={{ marginTop: "20px" }}>
+                711 84 Ave SW, Calgary, AB <br />
+                Canada
+              </p>
+              <div style={{ display: "flex" }} className="social-icons">
+                {" "}
+                <Icon
+                  color="red"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoPinterest}
+                />
+                <Icon
+                  color="#973cb7"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoInstagram}
+                />
+                <Icon
+                  color="#1877f2"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoFacebook}
+                />
+                <Icon
+                  color="#2a7bb6"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoLinkedin}
+                />
+                <Icon
+                  color="#39a2f4"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoTwitter}
+                />
+                <Icon
+                  color="#ed3833"
+                  ml={"10px"}
+                  fontSize={"25px"}
+                  as={IoLogoYoutube}
+                />
+              </div>
+            </div>
+            <div className="quickLinks">
+              <HeadingTag>Quick Links</HeadingTag>
+              <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
+                <LinkElement>
+                  <NextLink href="/about">about</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/experience">experience</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  {" "}
+                  <NextLink href="/portfolios">Portfolios</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  <NextLink href="/portfolios/gallery">gallery</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/portfolios/books">books</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/portfolios/wall-art">wall art</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/portfolios/projects">projects</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  {" "}
+                  <NextLink href="/resources">Resources</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  <NextLink href="/resources/faq">faq</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/contest">contest</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  <NextLink href="/blog">blog</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  <NextLink href="/book-now">contact</NextLink>
+                </LinkElement>
+              </ul>
+            </div>
+            <div className="About">
+              <HeadingTag>About Us</HeadingTag>
+              <p>
+                Canadian Portrait Photographer of the Year, Mark Laurie, is the
+                photographer for Inner Spirit Photography. Internationally
+                renowned, his clients fly in from all over the world or fly Mark
+                out. He has done portraits in 16 countries plus every province
+                in Canada **** Inner Spirit creates a transformational
+                experience with imagery that has been described as life
+                changing. Timeless images that portray the soul, desires and
+                personality of his clients. We create an enviroment that is so
+                safe and creative it becomes easy to express anything you want,
+                to experiment, to indulge in exploring you. Everyone is amazed
+                how easy and fun the session is.
+              </p>
+            </div>
+          </LinkBox>
+          <hr
+            style={{
+              backgroundColor: "var(--clr-red)",
+              width: "100%",
+              margin: "0 auto",
+            }}
+          />
+          <div
+            className="copyright"
+            style={{
+              display: "flex",
+              color: "white",
+              gap: "20px",
+              justifyContent: "center",
+              margin: "30px 0",
+              flexWrap: "wrap",
+            }}
+          >
+            <p>Copyright© 2022</p>
+            <p>Inner Spirit Photography</p>
+            <p>All Rights Reserved</p>
+            <p>Terms Of Use</p>
+            <p>Privacy Policy</p>
+          </div>
+          <hr
+            style={{
+              backgroundColor: "var(--clr-red)",
+              width: "100%",
+              margin: "0 auto",
+            }}
+          />
+          <div
+            style={{
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              margin: "30px 0",
+              justifyContent: "end",
+            }}
+          >
+            <p>Website by:</p>
+            <Image
+              height={100}
+              width={150}
+              alt={"website name"}
+              src="/aaron-tonner-web-solutions-logo-white-white.svg"
+            />
+          </div>
+        </Container>
+      </footer>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.0791090232547!2d-114.08319942383308!3d50.97772834925977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371711767f98659%3A0xbbb2559053a55ca5!2sInner%20Spirit%20Photography!5e0!3m2!1sen!2sin!4v1691152752711!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        allowFullScreen
+        allow="autoplay; fullscreen; picture-in-picture"
+        style={{
+          width: "100%",
+          height: "400px",
+        }}
+      ></iframe>
+    </>
+  );
 }

@@ -3,7 +3,6 @@ import Banner from "../components/banners/bannerPrimary";
 import LayoutJs from "../components/layoutJs";
 import { Container, GridAuto, Section } from "../components/layoutComponents";
 import ResourceList from "../components/resourceList";
-import BannerImg from "../images/banners/resources-banner.jpg";
 import Seo from "../components/seo";
 
 export default function Resources() {

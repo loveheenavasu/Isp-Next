@@ -310,7 +310,7 @@ export default function HeaderBasic() {
                   src="/inner-spirit-logo-text-white.svg"
                   alt="inner spirit photography logo"
                   height={100}
-                  width={170}
+                  width={250}
                 />
               </Link>
             </LogoContainer>

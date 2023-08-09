@@ -6,7 +6,7 @@ import Breadcrumb3Links from "../breadcrumbs/breadcrumb3links";
 import Image from "next/image";
 
 const Wrapper = styled.div`
-  background: var(--clr-dark);
+  background: var(--clr-black);
   padding-bottom: 4em;
   border-bottom: 8px solid var(--clr-light);
 
@@ -92,7 +92,7 @@ export default function BannerExperience(props) {
         <Image
           className="stretch clip-img "
           height={100}
-          width={100}
+          width={580}
           src={props.img}
           alt={props.alt}
         />
@@ -103,8 +103,6 @@ export default function BannerExperience(props) {
               link1={props.link1}
               to2={props.to2}
               link2={props.link2}
-              to3={props.to3}
-              link3={props.link3}
             />
             <hr />
             <h1 className="">{props.headline}</h1>

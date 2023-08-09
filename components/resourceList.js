@@ -15,10 +15,6 @@ const Article = styled.article`
     padding: 2em 2em 0 2em;
   }
 
-  .revelations-book-img {
-    width: 50%;
-  }
-
   h2 {
     color: var(--clr-accent);
   }
@@ -50,7 +46,7 @@ export default function ResourceList() {
           <Article href="/contest">
             <Image
               height={100}
-              width={100}
+              width={1200}
               className="img"
               src="/resources/contest-img.jpg"
               alt="calgary boudoir gallery"
@@ -72,8 +68,7 @@ export default function ResourceList() {
           <Article>
             <Image
               height={100}
-              width={100}
-              className="img revelations-book-img"
+              width={580}
               src="/resources/revelations.png"
               alt="calgary boudoir books portfolio"
             />
@@ -98,7 +93,7 @@ export default function ResourceList() {
           <Article href="/portfolios/books">
             <Image
               height={100}
-              width={100}
+              width={1200}
               className="img"
               src="/resources/podcast-img.jpg"
               alt="calgary boudoir books portfolio"
@@ -144,7 +139,7 @@ export default function ResourceList() {
           <Article href="/portfolios/books">
             <Image
               height={100}
-              width={100}
+              width={1200}
               className="img"
               src="/resources/fb-group.jpg"
               alt="calgary boudoir books portfolio"
