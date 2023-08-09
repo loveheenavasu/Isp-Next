@@ -19,7 +19,8 @@ export default function Resources() {
         to2="/resources"
         link2="Resources"
         headline="Resources"
-        description=""
+        description="When I saw my photos, I broke into tears because I thought, I can't believe how beautiful that person is."
+        name="- Deanna B."
       />
       <ResourceList />
     </LayoutJs>

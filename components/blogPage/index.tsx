@@ -12,12 +12,14 @@ import Tags from "../tags"
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api"
 import { CMS_NAME } from "../../lib/constants"
 import { Section, Container, HeroBannerPadding } from "../layoutComponents"
-import { ButtonPrimary } from "../buttons"
+import { ButtonPrimary, ButtonInline } from "../buttons"
 import styled from "styled-components"
 import Link from "next/link"
-import ServiceForm from "../Forms/ServiceForm"
+import ServiceForm from "../forms/serviceForm"
+import Image from "next/image"
 import commentBox from "commentbox.io"
 
+import Seo from "../seo"
 const BlogArticle = styled.article``
 
 // Banner
@@ -45,7 +47,7 @@ const BannerWrapper = styled.div`
   display: grid;
   place-items: center;
 
-  min-height: 40vh;
+  min-height: 80vh;
   height: 100%;
 
   @media screen and (max-width: 26em) {
@@ -178,7 +180,30 @@ const BlogWrapper = styled.div`
   }
   p {
     font-size: 1.2rem;
-    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+`
+
+// Layout
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-gap: 4em;
+
+  @media screen and (max-width: 48em) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`
+
+const AboutMark = styled.div`
+  box-shadow: var(--shadow-light);
+  border-radius: var(--br);
+  padding: 2em;
+
+  img {
+    height: 300px;
+    object-fit: cover;
   }
 `
 
@@ -196,35 +221,123 @@ export default function PostPage({ post, posts, preview }) {
 
   return (
     <LayoutJs>
-      {post.featuredImage ? (
-        <BannerGrid>
-          <BannerWrapper img={post.featuredImage?.node.sourceUrl}>
-            <Container className="spacing">
-              <BannerText className="spacing">
-                <div className="">
-                  <h1 className="title">{post.title}</h1>
-                </div>
-              </BannerText>
-            </Container>
-          </BannerWrapper>
-        </BannerGrid>
-      ) : null}
-
+      <Seo title={post.title} />
+      <HeroBannerPadding />
       <Section>
+        <Container>
+          <ContentWrapper>
+            <Aside className="spacing">
+              <AboutMark className="spacing">
+                <h3 className="caps accent title bold">about mark</h3>
+                <img
+                  src="/mark-nude-boudoir-photographer-calgary.gif"
+                  alt="mark laurie"
+                />
+                <p>
+                  {" "}
+                  Mark offered the first nude & boudoir photography studio in
+                  Calgary and remains the best. His imaginative portraits expand
+                  beyond the typical “lingerie and satin sheets” boudoir. Mark’s
+                  creatively passionate presentation of women has earned him the
+                  honour of being the most awarded photographer in his niche in
+                  Canada. Possibly North America.
+                </p>
+              </AboutMark>
+              <Navigation className="spacing">
+                <h3 className="caps accent title bold">
+                  Inner <br /> Spirit
+                </h3>
+                <div>
+                  <ul>
+                    <li>
+                      <ButtonInline href="/">Home</ButtonInline> <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/about">about us</ButtonInline> <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/experience">experience</ButtonInline>{" "}
+                      <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/portfolios">portfolios</ButtonInline>{" "}
+                      <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/resources/faq">faq</ButtonInline>{" "}
+                      <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/blog">blog</ButtonInline> <hr />
+                    </li>
+                    <li>
+                      <ButtonInline href="/book-now">
+                        book a session
+                      </ButtonInline>
+                    </li>
+                  </ul>
+                </div>
+              </Navigation>
+              <div className="service-form">
+                <ServiceForm />
+              </div>
+            </Aside>
+            <Content>
+              <BlogWrapper
+                className="blog-post"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h1
+                    className="headline
+                "
+                    itemProp="headline"
+                  >
+                    {post.title}
+                  </h1>
+
+                  <p>{post.date}</p>
+                </header>
+                {post.featuredImage ? (
+                  // <BannerGrid>
+                  //   <BannerWrapper img={post.featuredImage?.node.sourceUrl}>
+                  //     <Container className="spacing">
+                  //       <BannerText className="spacing">
+                  //         <div className="">
+                  //           <h1 className="title">{post.title}</h1>
+                  //         </div>
+                  //       </BannerText>
+                  //     </Container>
+                  //   </BannerWrapper>
+                  // </BannerGrid>
+                  <Image
+                    src={post.featuredImage?.node.sourceUrl}
+                    alt={post.title}
+                    height={500}
+                    width={600}
+                  />
+                ) : null}
+                {!!post.content && (
+                  <section itemProp="articleBody">
+                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                  </section>
+                )}
+
+                <hr />
+              </BlogWrapper>
+            </Content>
+          </ContentWrapper>
+        </Container>
+      </Section>
+
+      {/* <Section>
         <Container className="spacing">
           <BlogWrapper>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
-
-            {/* 
-
-            <SectionSeparator />
-            {morePosts.len
-              gth > 0 && <MoreStories posts={morePosts} />}
-          </> */}
-            <div className="commentbox" />
           </BlogWrapper>
         </Container>
-      </Section>
+      </Section> */}
     </LayoutJs>
   )
 }

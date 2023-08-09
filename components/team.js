@@ -6,7 +6,8 @@ import { Container, Flex, Section } from "./layoutComponents";
 import { AnchorInline, ButtonInline } from "./buttons";
 
 const TeamWrapper = styled.div`
-  background: url("../../images/small-sprite.jpg"), rgba(255, 255, 255, 0.7);
+  background: url("https://staging.innerspiritphoto.com/wp-content/uploads/2023/08/small-sprite.jpg"),
+    rgba(255, 255, 255, 0.7);
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
@@ -21,7 +22,6 @@ const Wrapper = styled.div`
   .headshot-img-desktop {
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     border: 2px solid var(--clr-accent);
- 
   }
   // .headshot-img-mobile {
   //   display: none;
@@ -63,9 +63,8 @@ const TeamMember = (props) => {
           className="headshot-img-desktop"
           src={props.img}
           alt={props.alt}
-          height={100}
-          width={300}
-          style={{height:'300px', objectFit:'cover'}}
+          height={50}
+          width={150}
         />
         <Text>
           <div>

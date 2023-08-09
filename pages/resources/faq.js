@@ -16,10 +16,10 @@ export default function Faq() {
       />
       <BannerFaq
         img="/banners/faq-banner-new.jpg"
-        to1="/"
-        link1="Home"
-        to2="/resources"
-        link2="Resources"
+        to1="/resources"
+        link1="Resources"
+        to2="/resources/faq"
+        link2="FAQ"
         link3="FAQ"
         to3="/resources/faq"
         headline="frequently asked questions"

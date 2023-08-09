@@ -106,7 +106,7 @@ export default function MeetMark2() {
               <Image
                 className="stretch"
                 height={100}
-                width={100}
+                width={500}
                 src="/mark-nude-boudoir-photographer-calgary.gif"
                 alt="nude and boudoir photographer in calgary, AB"
               />
@@ -138,28 +138,6 @@ export default function MeetMark2() {
               He’s not alone, an incredible team of women, along with Jan, his
               partner and wife, makes your time with Mark exceptional.
             </p>
-            {/* <Stats>
-              <Flex>
-                <div className="italics">
-                  <p>Photographed</p>
-                  <p className="headline">5,127+</p>
-                  <p className="teriatary">Women</p>
-                </div>
-                <div className="italics">
-                  <p>Donations</p>
-                  <p className="headline">$514,210+</p>
-                  <p className="teriatary">to Charity</p>
-                </div>
-                <div className="italics">
-                  <p>in Business</p>
-                  <p className="headline">42+</p>
-                  <p className="teriatary">Years</p>
-                </div>
-              </Flex>
-            </Stats> */}
-            {/* <ButtonUnderline to="/about">
-              more about mark &#x2192;
-            </ButtonUnderline> */}
           </Text>
         </FlexMobile>
       </Container>

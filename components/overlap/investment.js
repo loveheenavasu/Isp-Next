@@ -95,7 +95,7 @@ export default function Investment() {
               className="img-left"
               src="/special-boudoir-add-ons-calgary.jpg"
               alt="special boudoir add ons calgary"
-              width={795}
+              width={900}
               height={100}
             />
             <TextBoxRight className="spacing text-right">

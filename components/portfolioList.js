@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "./Image";
 import React from "react";
 import styled from "styled-components";
 import { ButtonPrimary } from "./buttons";
@@ -40,14 +40,15 @@ const ButtonWrapper = styled.div`
 `;
 
 export default function PortfolioList() {
+  let width = "auto";
   return (
     <Section>
       <Container>
         <GridTwo>
           <GridItem href="/portfolios/gallery">
             <Image
-              height={100}
-              width={100}
+              height={500}
+              width={width}
               className="img"
               src="/boudoir-gallery-link.jpg"
               alt="calgary boudoir gallery"
@@ -60,8 +61,8 @@ export default function PortfolioList() {
           </GridItem>
           <GridItem href="/portfolios/books">
             <Image
-              height={100}
-              width={100}
+              height={500}
+              width={600}
               className="img"
               src="/boudoir-books-link.jpg"
               alt="calgary boudoir books portfolio"
@@ -74,8 +75,8 @@ export default function PortfolioList() {
           </GridItem>
           <GridItem href="/portfolios/wall-art">
             <Image
-              height={100}
-              width={100}
+              height={500}
+              width={600}
               className="img"
               src="/boudoir-wall-art-link.jpg"
               alt="calgary boudoir wall art"
@@ -88,8 +89,8 @@ export default function PortfolioList() {
           </GridItem>
           <GridItem href="/portfolios/projects">
             <Image
-              height={100}
-              width={100}
+              height={500}
+              width={600}
               className="img"
               src="/boudoir-projects-link.jpg"
               alt="calgary boudoir projects"

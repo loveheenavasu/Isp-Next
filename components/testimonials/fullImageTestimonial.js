@@ -62,12 +62,14 @@ const ReviewBox = (props) => {
   return (
     <ReviewWrapper className="spacing">
       <div>
-        <Image
-          src="/frill.jpg"
-          alt="review of boudoir studio in Calgary"
-          height={100}
-          width={100}
-        />
+        <center>
+          <Image
+            src="/frill.jpg"
+            alt="review of boudoir studio in Calgary"
+            height={100}
+            width={300}
+          />
+        </center>
         <FlexStars>
           <FaStar />
           <FaStar />

@@ -65,7 +65,7 @@ const Text = styled.div`
 const Video = styled.div`
   @media screen and (max-width: 48em) {
     p {
-     color:var(--clr-dark);
+      display: none;
     }
   }
   // iframe {
@@ -150,14 +150,14 @@ export default function HeroBasic() {
               <span className="span-4">and empowerment</span>
             </h1>
 
-            {/* <ActionsDesktop>
+            <ActionsDesktop>
               <ButtonOutlineLight href="/experience">
                 explore the experience &#x2192;
               </ButtonOutlineLight>
               <ButtonPrimary href="/book-now">
                 book planning session now &#x2192;
               </ButtonPrimary>
-            </ActionsDesktop> */}
+            </ActionsDesktop>
             <Logo>
               <Image
                 src="/logo-white.svg"

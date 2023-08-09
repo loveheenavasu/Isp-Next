@@ -11,6 +11,7 @@ import {
   HeroBannerPadding,
 } from "../components/layoutComponents";
 import Pagination from "components/Pagination/Pagination";
+import Image from "components/Image";
 
 import styles from "styles/templates/Archive.module.scss";
 import styled from "styled-components";
@@ -160,16 +161,11 @@ export default function TemplateArchive({
         slug={slug}
       /> */}
       <Seo
-        title="Landscaping Blog - Insights From Calgary's Landscaping Company"
-        description="With more than two decades of experience, you can trust Project Landscape to provide you with the best landscaping advice."
+        title="Inner Spirit Photography Blog"
+        description="The Inner Spirit Photo blog."
       />
-      <HeroBannerPadding />
-      <HeroBannerPadding />
       <Section>
         <Container>
-          <center>
-            <h1 className="title">Landscaping Blog</h1>
-          </center>
           {Array.isArray(posts) && (
             <>
               <ul>

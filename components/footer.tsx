@@ -1,9 +1,9 @@
-import { EXAMPLE_PATH } from "../lib/constants";
-import Image from "next/image";
-import styled from "styled-components";
-import { Container } from "./layoutComponents";
-import { Icon } from "@chakra-ui/react";
-import { PhoneIcon, AtSignIcon, TimeIcon } from "@chakra-ui/icons";
+import { EXAMPLE_PATH } from "../lib/constants"
+import Image from "next/image"
+import styled from "styled-components"
+import { Container } from "./layoutComponents"
+import { Icon } from "@chakra-ui/react"
+import { PhoneIcon, AtSignIcon, TimeIcon } from "@chakra-ui/icons"
 import {
   IoLogoPinterest,
   IoLogoInstagram,
@@ -11,8 +11,8 @@ import {
   IoLogoFacebook,
   IoLogoLinkedin,
   IoLogoYoutube,
-} from "react-icons/io";
-import Link from "next/link";
+} from "react-icons/io"
+import Link from "next/link"
 
 const LinkBox = styled.div`
   display: grid;
@@ -26,25 +26,25 @@ const LinkBox = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
   }
 }
-`;
+`
 const HeadingTag = styled.h3`
   margin-bottom: 15px;
-`;
+`
 
 const NextLink = ({ children, href }) => {
   return (
     <Link style={{ color: "white", textDecoration: "underline" }} href={href}>
       {children}
     </Link>
-  );
-};
-const LinkElement = styled.div``;
+  )
+}
+const LinkElement = styled.div``
 export default function Footer() {
   return (
     <>
       <footer
         className="bg-accent-1 border-t border-accent-2"
-        style={{ backgroundColor: "var( --clr-black)", padding: "10px 0" }}
+        style={{ backgroundColor: "var( --clr-dark)", padding: "10px 0" }}
       >
         <div className="footer-logo">
           <Image
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
         <hr
           style={{
-            backgroundColor: "var(--clr-red)",
+            backgroundColor: "var(--clr-accent)",
             width: "80%",
             margin: "0 auto",
           }}
@@ -89,52 +89,82 @@ export default function Footer() {
               </p>
               <div style={{ display: "flex" }} className="social-icons">
                 {" "}
-                <Icon
-                  color="red"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoPinterest}
-                />
-                <Icon
-                  color="#973cb7"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoInstagram}
-                />
-                <Icon
-                  color="#1877f2"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoFacebook}
-                />
-                <Icon
-                  color="#2a7bb6"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoLinkedin}
-                />
-                <Icon
-                  color="#39a2f4"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoTwitter}
-                />
-                <Icon
-                  color="#ed3833"
-                  ml={"10px"}
-                  fontSize={"25px"}
-                  as={IoLogoYoutube}
-                />
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/boudoirphotographycalgary/"
+                >
+                  <Icon
+                    color="#973cb7"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoInstagram}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/innerspiritphoto"
+                >
+                  <Icon
+                    color="#1877f2"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoFacebook}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/marklauriephotographer/"
+                >
+                  <Icon
+                    color="#2a7bb6"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoLinkedin}
+                  />
+                </a>
+                <a target="_blank" href="https://twitter.com/marklaurie">
+                  <Icon
+                    color="#39a2f4"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoTwitter}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.pinterest.ca/innerspiritphot/_saved/"
+                >
+                  <Icon
+                    color="red"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoPinterest}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/c/InnerSpiritPhotographyCalgary/videos"
+                >
+                  <Icon
+                    color="#ed3833"
+                    ml={"10px"}
+                    fontSize={"25px"}
+                    as={IoLogoYoutube}
+                  />
+                </a>
               </div>
             </div>
             <div className="quickLinks">
               <HeadingTag>Quick Links</HeadingTag>
               <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
                 <LinkElement>
-                  <NextLink href="/about">about</NextLink>
+                  <NextLink href="/about">Home</NextLink>
                 </LinkElement>
                 <LinkElement>
-                  <NextLink href="/experience">experience</NextLink>
+                  <NextLink href="/about">About</NextLink>
+                </LinkElement>
+                <LinkElement>
+                  <NextLink href="/experience">Experience</NextLink>
                 </LinkElement>
 
                 <LinkElement>
@@ -143,16 +173,16 @@ export default function Footer() {
                 </LinkElement>
 
                 <LinkElement>
-                  <NextLink href="/portfolios/gallery">gallery</NextLink>
+                  <NextLink href="/portfolios/gallery">Gallery</NextLink>
                 </LinkElement>
                 <LinkElement>
-                  <NextLink href="/portfolios/books">books</NextLink>
+                  <NextLink href="/portfolios/books">Books</NextLink>
                 </LinkElement>
                 <LinkElement>
-                  <NextLink href="/portfolios/wall-art">wall art</NextLink>
+                  <NextLink href="/portfolios/wall-art">Wall art</NextLink>
                 </LinkElement>
                 <LinkElement>
-                  <NextLink href="/portfolios/projects">projects</NextLink>
+                  <NextLink href="/portfolios/projects">Projects</NextLink>
                 </LinkElement>
 
                 <LinkElement>
@@ -161,18 +191,18 @@ export default function Footer() {
                 </LinkElement>
 
                 <LinkElement>
-                  <NextLink href="/resources/faq">faq</NextLink>
+                  <NextLink href="/resources/faq">Faq</NextLink>
                 </LinkElement>
                 <LinkElement>
-                  <NextLink href="/contest">contest</NextLink>
-                </LinkElement>
-
-                <LinkElement>
-                  <NextLink href="/blog">blog</NextLink>
+                  <NextLink href="/contest">Contest</NextLink>
                 </LinkElement>
 
                 <LinkElement>
-                  <NextLink href="/book-now">contact</NextLink>
+                  <NextLink href="/blog">Blog</NextLink>
+                </LinkElement>
+
+                <LinkElement>
+                  <NextLink href="/book-now">Contact</NextLink>
                 </LinkElement>
               </ul>
             </div>
@@ -195,7 +225,7 @@ export default function Footer() {
           </LinkBox>
           <hr
             style={{
-              backgroundColor: "var(--clr-red)",
+              backgroundColor: "var(--clr-accent)",
               width: "100%",
               margin: "0 auto",
             }}
@@ -211,15 +241,31 @@ export default function Footer() {
               flexWrap: "wrap",
             }}
           >
-            <p>Copyright© 2022</p>
+            <p>Copyright© 2023</p>
             <p>Inner Spirit Photography</p>
             <p>All Rights Reserved</p>
-            <p>Terms Of Use</p>
-            <p>Privacy Policy</p>
+            <a
+              target="_blank"
+              href="https://www.innerspiritphoto.com/terms-of-use"
+              style={{
+                color: "white",
+              }}
+            >
+              Terms of use
+            </a>
+            <a
+              target="_blank"
+              href="https://www.innerspiritphoto.com/privacy-policy"
+              style={{
+                color: "white",
+              }}
+            >
+              Privacy Policy
+            </a>
           </div>
           <hr
             style={{
-              backgroundColor: "var(--clr-red)",
+              backgroundColor: "var(--clr-accent)",
               width: "100%",
               margin: "0 auto",
             }}
@@ -255,5 +301,5 @@ export default function Footer() {
         }}
       ></iframe>
     </>
-  );
+  )
 }

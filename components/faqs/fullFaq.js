@@ -66,11 +66,11 @@ const AccordionItem = (props) => {
     <AccordionWrapper item={item}>
       <TitleFlex item={item} onClick={toggleItem}>
         <h3 className="bold italics accent subhead">{props.question}</h3>
-        {/* <ArrowImg
+        <ArrowImg
           item={item}
-          src={ArrowDown}
+          src="/arrow-down.svg"
           alt="questions about nude & boudoir photography calgary"
-        /> */}
+        />
       </TitleFlex>
       <AccordionContent className="spacing" item={item}>
         <div className="spacing">

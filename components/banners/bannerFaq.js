@@ -2,14 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Actions, HeroBannerPadding } from "../layoutComponents";
 import { ButtonLight, AnchorInline, ButtonPrimary } from "../buttons";
-import Breadcrumb3Links from "../breadcrumbs/breadcrumb3links";
+import Breadcrumb2Links from "../breadcrumbs/breadcrumb2links";
 import Image from "next/image";
+
 const Wrapper = styled.div`
-  background: var(--clr-dark);
+  background: var(--clr-black);
   padding-bottom: 4em;
   border-bottom: 8px solid var(--clr-light);
 
   .container {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    z-index: 2;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -45,6 +50,18 @@ const Wrapper = styled.div`
     border-radius: var(--br);
     object-fit: cover;
   }
+`;
+
+const GridWrapper = styled.div`
+  // display: grid;
+  // grid-template-rows: 10em 600px auto;
+`;
+
+const Bg = styled.div`
+  grid-row: 1 / span 2;
+  grid-column: 1 / -1;
+  z-index: 1;
+  background: var(--clr-accent);
 `;
 
 const Text = styled.div`
@@ -87,39 +104,44 @@ export default function BannerFaq(props) {
   return (
     <Wrapper>
       <HeroBannerPadding />
-      <Container className="container">
-        <Image
-          className="stretch clip-img "
-          height={100}
-          width={100}
-          src={props.img}
-          alt={props.alt}
-        />
-        <Text className="spacing">
-          <div>
-            <Breadcrumb3Links
-              to1={props.to1}
-              link1={props.link1}
-              to2={props.to2}
-              link2={props.link2}
-              to3={props.to3}
-              link3={props.link3}
-            />
-            <hr />
-            <h1 className="">{props.headline}</h1>
-          </div>
+      <GridWrapper>
+        {/* <Bg /> */}
+        <Container className="container">
+          <Image
+            className="stretch clip-img "
+            height={100}
+            width={580}
+            src={props.img}
+            alt={props.alt}
+          />
+          <Text className="spacing">
+            <div>
+              <Breadcrumb2Links
+                to1={props.to1}
+                link1={props.link1}
+                to2={props.to2}
+                link2={props.link2}
+                to3={props.to3}
+                link3={props.link3}
+              />
+              <hr />
+              <h1 className="">{props.headline}</h1>
+            </div>
 
-          <Actions>
-            <ButtonPrimary className="btn-light" href="/book-now">
-              book planning session now &#x2192;
-            </ButtonPrimary>
-            <ButtonPrimary className="btn-accent" href="/book-now">
-              book planning session now &#x2192;
-            </ButtonPrimary>
-          </Actions>
-          <p>{props.description}</p>
-        </Text>
-      </Container>
+            <Actions>
+              <ButtonPrimary className="btn-light" href="/book-now">
+                book planning session now &#x2192;
+              </ButtonPrimary>
+              <ButtonPrimary className="btn-accent" href="/book-now">
+                book planning session now &#x2192;
+              </ButtonPrimary>
+            </Actions>
+            <p>
+              <span className="">{props.description}</span> {props.name}{" "}
+            </p>
+          </Text>
+        </Container>
+      </GridWrapper>
     </Wrapper>
   );
 }

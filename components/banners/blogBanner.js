@@ -99,6 +99,8 @@ export default function BlogBanner(props) {
             className="img stretch clip-img"
             src="/banners/blog-banner.jpg"
             alt="The inner spirit photography blog"
+            height={100}
+            width={580}
           />
           <Text className="spacing">
             <div>

@@ -4,7 +4,7 @@ import { Actions, Container, Section } from "./layoutComponents";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background: url("../../images/cta-secondary-alley-nude.jpg"),
+  background: url("https://staging.innerspiritphoto.com/wp-content/uploads/2023/08/cta-secondary-alley-nude.jpg"),
     rgba(0, 0, 0, 0.2);
   background-blend-mode: overlay;
   background-position: right;

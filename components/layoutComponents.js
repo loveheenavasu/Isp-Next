@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const device = {
   md: "48em",
-}
+};
 
 export const Section = styled.section`
   padding: 4em 0;
@@ -10,20 +10,20 @@ export const Section = styled.section`
   @media screen and (max-width: 450px) {
     padding: 4em 0;
   }
-`
+`;
 
 export const Container = styled.div`
   width: 85%;
   margin: 0 auto;
   max-width: 95rem;
-`
+`;
 
 export const PageTitle = styled.div`
   background: var(--clr-dark);
   color: var(--clr-accent);
   padding: 2em 0;
   margin-bottom: var(--spacer);
-`
+`;
 
 export const Actions = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ export const Actions = styled.div`
       margin-top: var(--spacer);
     }
   }
-`
+`;
 
 export const ActionsStacked = styled.div`
   display: flex;
@@ -63,7 +63,7 @@ export const ActionsStacked = styled.div`
   & > * + * {
     margin-top: var(--spacer);
   }
-`
+`;
 
 export const Flex = styled.div`
   display: flex;
@@ -75,6 +75,9 @@ export const Flex = styled.div`
     flex-direction: column;
   }
 
+  & > * {
+    width: 100%;
+  }
 
   & > * + * {
     margin-left: 2em;
@@ -84,7 +87,7 @@ export const Flex = styled.div`
       margin-top: var(--spacer);
     }
   }
-`
+`;
 
 export const FlexMobileOpp = styled.div`
   display: flex;
@@ -106,7 +109,7 @@ export const FlexMobileOpp = styled.div`
       margin-bottom: var(--spacer);
     }
   }
-`
+`;
 
 export const GridTwo = styled.div`
   display: grid;
@@ -116,7 +119,7 @@ export const GridTwo = styled.div`
   @media screen and (max-width: ${device.md}) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const GridThree = styled.div`
   display: grid;
@@ -126,7 +129,7 @@ export const GridThree = styled.div`
   @media screen and (max-width: ${device.md}) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const GridAuto = styled.div`
   display: grid;
@@ -137,7 +140,7 @@ export const GridAuto = styled.div`
     justify-self: center;
     align-self: center;
   }
-`
+`;
 
 export const HeroBannerPadding = styled.div`
   padding: 3em 0 3em 0;
@@ -149,4 +152,4 @@ export const HeroBannerPadding = styled.div`
   @media screen and (max-width: 22em) {
     padding: 1.5em 0 4em 0;
   }
-`
+`;

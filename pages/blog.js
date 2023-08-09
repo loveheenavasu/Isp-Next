@@ -15,13 +15,14 @@ import useSite from "hooks/use-site";
 import { WebsiteJsonLd } from "lib/json-ld";
 import Seo from "../components/seo";
 import Pagination from "components/Pagination";
+import BlogBanner from "../components/banners/blogBanner";
 
 const device = {
   md: "48em",
 };
 
 const Article = styled.article`
-  width: 60%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: var(--shadow-light);
@@ -130,18 +131,16 @@ export default function Blog({ posts, pagination }) {
   return (
     <LayoutJs>
       <Seo
-        title="Shelter in Place Blog - Christianity Blog"
-        description="Welcome to the Shelter in Place blog by Brian Pickup."
+        title="Inner Spirit Photography Blogs"
+        description="Welcome to the Inner Spirit Photo blogs!"
       />
-      <BannerWrapper>
-        <Container className="spacing">
-          <BannerText className="spacing">
-            <div className="">
-              <h1 className="title">Shelter in Place blog</h1>
-            </div>
-          </BannerText>
-        </Container>
-      </BannerWrapper>
+      <BlogBanner
+        to1="/"
+        link1="Home"
+        to2="/blog"
+        link2="Blog"
+        headline="Blog"
+      />
       <Section>
         <Container>
           <Ol>
