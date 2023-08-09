@@ -9,6 +9,36 @@ export const PAGE_COMPONENTS_ACF_FIELDS = gql`
           __typename
           text
         }
+        ... on Page_Pagecomponents_PageComponents_Banner {
+          __typename
+          title
+          description
+          subheader
+          image {
+            altText
+            sourceUrl(size: MEDIUM_LARGE)
+            srcSet
+          }
+        }
+        ... on Page_Pagecomponents_PageComponents_SeoPage {
+          __typename
+          title
+          description
+        }
+        ... on Page_Pagecomponents_PageComponents_ImageRight {
+          __typename
+          body
+          fieldGroupName
+          subheader
+          title
+          button
+          link
+          image {
+            altText
+            sourceUrl(size: MEDIUM_LARGE)
+            srcSet
+          }
+        }
       }
     }
   }
