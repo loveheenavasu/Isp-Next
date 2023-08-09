@@ -39,6 +39,28 @@ export const PAGE_COMPONENTS_ACF_FIELDS = gql`
             srcSet
           }
         }
+        ... on Page_Pagecomponents_PageComponents_ImageGallery {
+          __typename
+          body
+          subheader
+          title
+          imageGallery {
+            altText
+            sourceUrl(size: MEDIUM_LARGE)
+            srcSet
+          }
+        }
+        ... on Page_Pagecomponents_PageComponents_ComponentC {
+          __typename
+          body
+          subheader
+          title
+          image {
+            altText
+            sourceUrl(size: MEDIUM_LARGE)
+            srcSet
+          }
+        }
       }
     }
   }

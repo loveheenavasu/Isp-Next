@@ -92,7 +92,7 @@ export default function BannerSecondary(props) {
         <Image
           className="stretch clip-img "
           height={100}
-          width={100}
+          width={580}
           src={props.img}
           alt={props.alt}
         />
