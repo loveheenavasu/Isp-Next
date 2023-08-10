@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { Section } from "components/layoutComponents";
 import Image from "components/Image";
 
-const Wrapper = styled.div`
-  background: var(--clr-dark);
-`;
-
 const Text = styled.div`
   max-width: 110ch;
   width: 100%;
@@ -40,34 +36,33 @@ const Grid = styled.div`
   }
 `;
 
-export default function ImageGallery({ subheader, title, body, imageGallery }) {
+export default function ImageGallery({ totalGalleryImages }) {
   let width = "100%";
   let height = "100%";
   return (
-    <Wrapper>
+    <div>
       <Section>
         <Container className="spacing">
           <Text className="spacing">
             <div>
-              <p className="subheader accent">{subheader}</p>
-              <h2 className="title">{title}</h2>
+              <h2 className="title">Gallery</h2>
             </div>
           </Text>
           <Grid>
-            {imageGallery.map((image) => {
+            {totalGalleryImages.map((image) => {
               return (
                 <Image
-                  alt={image.altText || ""}
-                  srcSet={image.srcSet}
-                  src={image.src}
-                  width={width}
-                  height={height}
+                  alt={"galleryImage"}
+                  src={image.sourceUrl}
+                  width={600}
+                  height={100}
+                  objectFit={"cover"}
                 />
               );
             })}
           </Grid>
         </Container>
       </Section>
-    </Wrapper>
+    </div>
   );
 }

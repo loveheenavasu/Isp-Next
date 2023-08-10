@@ -6,7 +6,7 @@ import CTAsecondary from "../../components/CTAsecondary";
 import CTA from "../../components/CTA";
 import { Container, Section } from "../../components/layoutComponents";
 import styled from "styled-components";
-import { getGalleryImages } from "../../lib/images";
+import { getWallArtImages } from "../../lib/images";
 import ImageGallery from "../../components/PageComponents/ImageGallery/ImageGallery";
 
 const Text = styled.div`
@@ -14,24 +14,23 @@ const Text = styled.div`
   width: 100%;
 `;
 export async function getStaticProps() {
-  const allGalleryImages = await getGalleryImages();
+  const allWallArtImages = await getWallArtImages();
 
   return {
     props: {
-      allGalleryImages,
+      allWallArtImages,
     },
   };
 }
 
-export default function Gallery({ allGalleryImages }) {
+export default function WallArt({ allWallArtImages }) {
   const galleryNode =
-    allGalleryImages?.data?.pages?.edges[0]?.node?.ACF_GalleryPage;
-  const totalGalleryImages = galleryNode?.gallery;
-
+    allWallArtImages?.data?.pages?.edges[0]?.node?.ACF_GalleryPage;
+  const totalWallArtImages = galleryNode?.gallery;
   return (
     <LayoutJs>
       <Seo
-        title="Gallery | Inner Spirit Photography"
+        title="WallArt | Inner Spirit Photography"
         description="Here is the full gallery of Inner Spirit Photography!"
       />
       <BannerSecondary
@@ -40,9 +39,9 @@ export default function Gallery({ allGalleryImages }) {
         link1="Home"
         to2="/portfolios"
         link2="Portfolios"
-        to3="/portfolios/gallery"
-        link3="Gallery"
-        headline="gallery"
+        to3="/portfolios/wall-art"
+        link3="Wall-Art"
+        headline="wall-art"
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
@@ -143,7 +142,7 @@ export default function Gallery({ allGalleryImages }) {
         </Container>
       </Section>
 
-      <ImageGallery totalGalleryImages={totalGalleryImages} />
+      <ImageGallery totalGalleryImages={totalWallArtImages} />
       <CTA
         headline="we’ll create your 
         experience of a liftetime"
