@@ -45,103 +45,71 @@ export default function Projects({ allProjectsImages }) {
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
+      <ImageGallery totalGalleryImages={totalProjectsImages} />
       <CTAsecondary />
       <Section>
         <Container>
           <Text className="spacing">
-            <h2 className="headline italics accent">
-              need more information on what it’s like?
+            <h2 style={{ color: "var(--clr-dark" }} className="headline ">
+              nude, boudoir, & beauty projects
             </h2>
             <div className="spacing">
               <p>
-                So what’s it like to commission us to create something
-                breathtaking for you? It’s a great question, especially since we
-                provide a unique experience for mostly intimate images.
+                To push boundaries, gain new skills, experiment, or create a new
+                purpose, Mark Laurie does personal projects.
               </p>
               <p>
-                For most women, it has varying degrees of emotional highs and
-                lows. I thought a great way to explain this is with a
-                third-person narrative. So this is what it is.
+                Often, he pulls together a team: makeup artist, body painters,
+                models, hair stylists, assistants, specialists and occasionally
+                other photographers. All working towards a vision he has
+                created.
               </p>
               <p>
-                It’s time to be outrageous, to be bold, to step out of your
-                comfort zone, even if it’s only a little. This is the place to
-                do it. To embrace how the world sees you, to showcase how you
-                want to be seen.
+                The photography projects are usually in Calgary, but he has
+                traveled to international locations. They may be his signature
+                nudes, boudoir, glamour but can easily go beyond that.
               </p>
               <p>
-                We will be honest, for most women, it’s a roller coaster of
-                excitement and doubt. For most, here is how it goes.
+                His Mermaid project is an example. They did a test session in a
+                smaller pool with only a couple of mermaids. Got the kinks out,
+                sourced a larger pool, 6 models, an assistant and another
+                photographer. Staged the pool then spent 13 hours in the water,
+                under the water. It was amazing and the images were fantastic!
               </p>
               <p>
-                Something is happening in your life that gives you the
-                determination to call. You meet Mark; he seems nice, better he
-                seems to know what you are about. You get excited, this could
-                work; you book a Signature Experience and leave. Then doubt,
-                what have you done, you take horrid photos with your clothes on,
-                oh my gosh. Then your session date arrives; you are nervous but
-                there.
+                The big project right now is Her Body Speaks
+                (http://herbodyspeaks.ca). The vision for this is to amass a
+                body of work with words that are an empowerment statement and a
+                role model inspiration event. The end goal is a book and Art
+                gallery display. Each woman gets makeup done then their
+                positive, powerful word choices are painted on their bodies.
+                Following that they step onto the white seamless background for
+                an empowering photo shoot. The session wraps with the current
+                writer, Terry Groves, interviewing them for their story.
               </p>
               <p>
-                Jan’s makeup and hair approach calm you, it looks amazing. This
-                could work, you think. Then Mark’s magic starts, moving you out
-                of your comfort zone with amazing ease. Embracing the rush of
-                the experience. Even you have to admit, you look breathtaking in
-                the images. Your excitement rockets! Really! Boudoir, glamour,
-                even nudes; you sample them all, you really are bold.
+                Mark usually draws from his clients for his projects. He brings
+                in models if the project needs it. That is one of the perks of
+                being photographed by Mark, more adventures can wait!
               </p>
               <p>
-                In a blink it seems the 4 hours are over, 140 of the most
-                incredible images taken. You leave floating in the afterglow.
-                Then you start to wonder, did you really do that? Can they
-                possibly be as good as you thought? What if they aren’t?
+                Everyone at Inner Spirit loves body painting, so we host Paint
+                Jams at least every couple of months. (Covid causing a blip to
+                that!) You will find up to 6 painters, with a model each; free
+                to express any artistic vision that they wish. An amazing body
+                of painted body art is created!
               </p>
               <p>
-                You come to your viewing, more nervous than to your session. Oh
-                my gosh, the screen is huge, the images are huge. Wait, the
-                images are fantastic, there is too many that are good. . .
-                great. . . wait, better than great. Oh, this is satisfying. Oh,
-                this feels even better than the session. No wonder he guarantees
-                the experiences, it’s like magic what he does. Uh, oh, this is
-                hard, picking so many as the best.
+                You will find the empowerment thread emerge somewhere in his
+                personal work. Body embracing, confidence, expressions of female
+                power are underlying themes he does not stray far from.
               </p>
-              <p>
-                You pick up your images, you comment on how the experience has
-                changed you. You may not have planned for that, even expected
-                it, but you see yourself differently. People see you
-                differently. You have done what many cannot and they mention it.
-                You feel elevated, unique because, well, you are.
-              </p>
-              <p>
-                And now you get it. You have just become the newest member of an
-                elite sisterhood of nearly 5,000 women who have plunged into an
-                enriching experience with Mark.
-              </p>
-              <p>
-                Or, it could be that you are already there. That Inner Spirit is
-                just the perfect place to be the spectacular woman you already
-                are.
-              </p>
-              <p>Either way, it’s a transformational experience.</p>
-              <p>
-                The arch of the experience, the planning, the session, the
-                viewing, the picking up; even to the show to friends, appears to
-                be hard to articulate to the depth you felt it.
-              </p>
-              <p>
-                So what did you think? Is this what you felt when you went
-                through it? Can you imagine yourself going through this? Let me
-                know.
-              </p>
-              <p>
-                Inner Spirit Photography is listed in the Best of Calgary
-                Directory of Photographers
-              </p>
+              <p>He is open to collaborative ideas too, just Contact Us !</p>
             </div>
           </Text>
         </Container>
       </Section>
-      <ImageGallery totalGalleryImages={totalProjectsImages} />
+
       <CTA
         headline="we’ll create your 
         experience of a liftetime"

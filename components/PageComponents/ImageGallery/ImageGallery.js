@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Section } from "components/layoutComponents";
 import Image from "components/Image";
 
+const Wrapper = styled.div`
+  background: var(--clr-dark);
+`;
 const Text = styled.div`
   max-width: 110ch;
   width: 100%;
@@ -40,14 +43,9 @@ export default function ImageGallery({ totalGalleryImages }) {
   let width = "100%";
   let height = "100%";
   return (
-    <div>
+    <Wrapper>
       <Section>
         <Container className="spacing">
-          <Text className="spacing">
-            <div>
-              <h2 className="title">Gallery</h2>
-            </div>
-          </Text>
           <Grid>
             {totalGalleryImages.map((image) => {
               return (
@@ -63,6 +61,6 @@ export default function ImageGallery({ totalGalleryImages }) {
           </Grid>
         </Container>
       </Section>
-    </div>
+    </Wrapper>
   );
 }

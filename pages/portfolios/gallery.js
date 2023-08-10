@@ -34,6 +34,7 @@ export default function Gallery({ allGalleryImages }) {
         title="Gallery | Inner Spirit Photography"
         description="Here is the full gallery of Inner Spirit Photography!"
       />
+
       <BannerSecondary
         img="/banners/gallery-banner.jpg"
         to1="/"
@@ -46,7 +47,9 @@ export default function Gallery({ allGalleryImages }) {
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
+      <ImageGallery totalGalleryImages={totalGalleryImages} />
       <CTAsecondary />
+
       <Section>
         <Container>
           <Text className="spacing">
@@ -142,8 +145,6 @@ export default function Gallery({ allGalleryImages }) {
           </Text>
         </Container>
       </Section>
-
-      <ImageGallery totalGalleryImages={totalGalleryImages} />
       <CTA
         headline="we’ll create your 
         experience of a liftetime"

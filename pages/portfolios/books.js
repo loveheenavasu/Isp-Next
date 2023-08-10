@@ -44,103 +44,57 @@ export default function Books({ allBooksImages }) {
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
+      <ImageGallery totalGalleryImages={totalBooksImages} />
       <CTAsecondary />
       <Section>
         <Container>
           <Text className="spacing">
             <h2 className="headline italics accent">
-              need more information on what it’s like?
+              our nude portrait books will delight you!
             </h2>
             <div className="spacing">
               <p>
-                So what’s it like to commission us to create something
-                breathtaking for you? It’s a great question, especially since we
-                provide a unique experience for mostly intimate images.
+                Each of our books is unique and handcrafted. We strive to make
+                your vision a reality with a variety of different, artistic
+                treatments done to your book image selections .
               </p>
               <p>
-                For most women, it has varying degrees of emotional highs and
-                lows. I thought a great way to explain this is with a
-                third-person narrative. So this is what it is.
+                It takes a few weeks for your images to be retouched and
+                enhanced then your layout is designed. Before the book leaves to
+                be printed in an Italian castle by a mostly female staff, you
+                view and approve our layout design. Printing time depends on the
+                bookmaker’s volume flow, book type, and accessories, taking from
+                one to six weeks to produce.
               </p>
               <p>
-                It’s time to be outrageous, to be bold, to step out of your
-                comfort zone, even if it’s only a little. This is the place to
-                do it. To embrace how the world sees you, to showcase how you
-                want to be seen.
+                We call you as soon as it arrives. We have women gasping and
+                crying upon seeing the emotional beauty of themselves in their
+                own hardcover book!
               </p>
               <p>
-                We will be honest, for most women, it’s a roller coaster of
-                excitement and doubt. For most, here is how it goes.
+                Your books are available in many styles from traditional to the
+                very latest trend. For example, we have a 9 X 13 inch book with
+                a steel cover and a storybook with a soft leather style cover,
+                the page edges delicately ripped. There are various styles of
+                hardcover book, some that can hold a video screen in the top lid
+                of their box.
               </p>
               <p>
-                Something is happening in your life that gives you the
-                determination to call. You meet Mark; he seems nice, better he
-                seems to know what you are about. You get excited, this could
-                work; you book a Signature Experience and leave. Then doubt,
-                what have you done, you take horrid photos with your clothes on,
-                oh my gosh. Then your session date arrives; you are nervous but
-                there.
+                Sizes vary, colors abound and there are a dazzling array of
+                finishes and accessories.
               </p>
               <p>
-                Jan’s makeup and hair approach calm you, it looks amazing. This
-                could work, you think. Then Mark’s magic starts, moving you out
-                of your comfort zone with amazing ease. Embracing the rush of
-                the experience. Even you have to admit, you look breathtaking in
-                the images. Your excitement rockets! Really! Boudoir, glamour,
-                even nudes; you sample them all, you really are bold.
+                We think it is kind of cool to have, Printed in Italy in your
+                book. It is a statement.
               </p>
               <p>
-                In a blink it seems the 4 hours are over, 140 of the most
-                incredible images taken. You leave floating in the afterglow.
-                Then you start to wonder, did you really do that? Can they
-                possibly be as good as you thought? What if they aren’t?
-              </p>
-              <p>
-                You come to your viewing, more nervous than to your session. Oh
-                my gosh, the screen is huge, the images are huge. Wait, the
-                images are fantastic, there is too many that are good. . .
-                great. . . wait, better than great. Oh, this is satisfying. Oh,
-                this feels even better than the session. No wonder he guarantees
-                the experiences, it’s like magic what he does. Uh, oh, this is
-                hard, picking so many as the best.
-              </p>
-              <p>
-                You pick up your images, you comment on how the experience has
-                changed you. You may not have planned for that, even expected
-                it, but you see yourself differently. People see you
-                differently. You have done what many cannot and they mention it.
-                You feel elevated, unique because, well, you are.
-              </p>
-              <p>
-                And now you get it. You have just become the newest member of an
-                elite sisterhood of nearly 5,000 women who have plunged into an
-                enriching experience with Mark.
-              </p>
-              <p>
-                Or, it could be that you are already there. That Inner Spirit is
-                just the perfect place to be the spectacular woman you already
-                are.
-              </p>
-              <p>Either way, it’s a transformational experience.</p>
-              <p>
-                The arch of the experience, the planning, the session, the
-                viewing, the picking up; even to the show to friends, appears to
-                be hard to articulate to the depth you felt it.
-              </p>
-              <p>
-                So what did you think? Is this what you felt when you went
-                through it? Can you imagine yourself going through this? Let me
-                know.
-              </p>
-              <p>
-                Inner Spirit Photography is listed in the Best of Calgary
-                Directory of Photographers
+                But of course, what else would you expect from Calgary’s top
+                luxury studio?
               </p>
             </div>
           </Text>
         </Container>
       </Section>
-      <ImageGallery totalGalleryImages={totalBooksImages} />
       <CTA
         headline="we’ll create your 
         experience of a liftetime"
