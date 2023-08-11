@@ -13,6 +13,9 @@ const Text = styled.div`
   max-width: 100ch;
   width: 100%;
 `;
+const Heading = styled.h2`
+  color: var(--clr-dark);
+`;
 export async function getStaticProps() {
   const allWallArtImages = await getWallArtImages();
 
@@ -26,7 +29,7 @@ export async function getStaticProps() {
 export default function WallArt({ allWallArtImages }) {
   const galleryNode =
     allWallArtImages?.data?.pages?.edges[0]?.node?.ACF_GalleryPage;
-  const totalWallArtImages = galleryNode?.gallery;
+  const totalWallArtImages = galleryNode?.gallery || [];
   return (
     <LayoutJs>
       <Seo
@@ -45,104 +48,93 @@ export default function WallArt({ allWallArtImages }) {
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
+      <ImageGallery totalGalleryImages={totalWallArtImages} />
       <CTAsecondary />
       <Section>
         <Container>
           <Text className="spacing">
-            <h2 className="headline italics accent">
-              need more information on what it’s like?
-            </h2>
+            <Heading className="headline wallArtheading ">Wall Art</Heading>
             <div className="spacing">
+              <Heading className="headline wallArtheading ">
+                Enlargements and Framed Photos
+              </Heading>
               <p>
-                So what’s it like to commission us to create something
-                breathtaking for you? It’s a great question, especially since we
-                provide a unique experience for mostly intimate images.
+                Be the Art on your walls! Single powerful images or collages of
+                images telling a story. Options are paper, metal, canvas and
+                acrylic. Boudoir, nude or fashion, all work well.
               </p>
+              <Heading className="headline wallArtheading ">
+                Paper Prints
+              </Heading>
               <p>
-                For most women, it has varying degrees of emotional highs and
-                lows. I thought a great way to explain this is with a
-                third-person narrative. So this is what it is.
+                Rich and lush traditional paper is still desirable. With a
+                tested lifespan for over 200 years plus a protective museum
+                quality finish means no glass. Custom sizes from 11×14 to 40×60.
+                Included is our Flush Frame that floats on your wall. You can
+                also go with matted and framed.
               </p>
+              <Heading className="headline wallArtheading ">
+                Metal Prints
+              </Heading>
               <p>
-                It’s time to be outrageous, to be bold, to step out of your
-                comfort zone, even if it’s only a little. This is the place to
-                do it. To embrace how the world sees you, to showcase how you
-                want to be seen.
+                Detailed in high gloss the metal print showcases vibrant colors
+                making it a stylish choice. The illusion of floating off the
+                wall is created with special pre-installed hanging hardware.
+                Being metal it won’t degrade.
               </p>
+              <Heading className="headline wallArtheading ">
+                {" "}
+                Canvas Prints
+              </Heading>
               <p>
-                We will be honest, for most women, it’s a roller coaster of
-                excitement and doubt. For most, here is how it goes.
+                Archival artist canvas wrapped around a one-inch wood frame. You
+                can add a metal or wood frame to it as well to make a classy art
+                piece. Alternatively, your image can be mounted on museum
+                quality board to make for easy framing.
               </p>
+              <Heading className="headline wallArtheading ">
+                Acrylic Print
+              </Heading>
               <p>
-                Something is happening in your life that gives you the
-                determination to call. You meet Mark; he seems nice, better he
-                seems to know what you are about. You get excited, this could
-                work; you book a Signature Experience and leave. Then doubt,
-                what have you done, you take horrid photos with your clothes on,
-                oh my gosh. Then your session date arrives; you are nervous but
-                there.
+                The unique, crisp look gives your image a futuristic look. Your
+                mage appears to be painted on the glass and arrives ready to
+                hang.
               </p>
+              <Heading className="headline wallArtheading ">
+                why a wall print?{" "}
+              </Heading>
               <p>
-                Jan’s makeup and hair approach calm you, it looks amazing. This
-                could work, you think. Then Mark’s magic starts, moving you out
-                of your comfort zone with amazing ease. Embracing the rush of
-                the experience. Even you have to admit, you look breathtaking in
-                the images. Your excitement rockets! Really! Boudoir, glamour,
-                even nudes; you sample them all, you really are bold.
-              </p>
-              <p>
-                In a blink it seems the 4 hours are over, 140 of the most
-                incredible images taken. You leave floating in the afterglow.
-                Then you start to wonder, did you really do that? Can they
-                possibly be as good as you thought? What if they aren’t?
-              </p>
-              <p>
-                You come to your viewing, more nervous than to your session. Oh
-                my gosh, the screen is huge, the images are huge. Wait, the
-                images are fantastic, there is too many that are good. . .
-                great. . . wait, better than great. Oh, this is satisfying. Oh,
-                this feels even better than the session. No wonder he guarantees
-                the experiences, it’s like magic what he does. Uh, oh, this is
-                hard, picking so many as the best.
-              </p>
-              <p>
-                You pick up your images, you comment on how the experience has
-                changed you. You may not have planned for that, even expected
-                it, but you see yourself differently. People see you
-                differently. You have done what many cannot and they mention it.
-                You feel elevated, unique because, well, you are.
-              </p>
-              <p>
-                And now you get it. You have just become the newest member of an
-                elite sisterhood of nearly 5,000 women who have plunged into an
-                enriching experience with Mark.
-              </p>
-              <p>
-                Or, it could be that you are already there. That Inner Spirit is
-                just the perfect place to be the spectacular woman you already
-                are.
-              </p>
-              <p>Either way, it’s a transformational experience.</p>
-              <p>
-                The arch of the experience, the planning, the session, the
-                viewing, the picking up; even to the show to friends, appears to
-                be hard to articulate to the depth you felt it.
-              </p>
-              <p>
-                So what did you think? Is this what you felt when you went
-                through it? Can you imagine yourself going through this? Let me
-                know.
-              </p>
-              <p>
-                Inner Spirit Photography is listed in the Best of Calgary
-                Directory of Photographers
+                Having art on your walls is the personal touch, giving your
+                walls a flavour unique to you. Women put personal images up for
+                very different reasons. The room itself lends to different looks
+                too. It is a reminder of your power and confidence. In the
+                tumble of the day, our sense of self can get bruised a bit. An
+                image reflecting back to you your true spirit lifts you up. In a
+                bedroom a more daring, sultry nude or boudoir image sets the
+                mood. Here it reminds you of your sensuality, how sexy you are.
+                The right look shows your sensual side is more than skin deep
+                :it’s how you express yourself. Living and dining rooms are
+                great for those sweeping emotional images with rich colors that
+                warm a room. Here you can switch it up with something artsy and
+                dramatic or go earthy and quiet. Family rooms are where the
+                playful images go, something fun that flavours the room with
+                joy. The nice thing about photographs is they are easy to change
+                seasonally. We do that in our home, loving the change it gives
+                for the season. We can break out of traditional sizes. Images
+                can be all sorts of shapes to go anywhere, even to fit together
+                creating a larger concept on the wall. Some women get nervous
+                that a wall print could be seen as vain, self-indulgent but more
+                often they are viewed with envy. The common comment is “If I
+                looked that good it would be on my wall too!” It may take a few
+                days to adjust to a large size image but after you do, you can
+                never go back! A wall size print is amazing art. You do deserve
+                that for yourself.
               </p>
             </div>
           </Text>
         </Container>
       </Section>
 
-      <ImageGallery totalGalleryImages={totalWallArtImages} />
       <CTA
         headline="we’ll create your 
         experience of a liftetime"

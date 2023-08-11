@@ -47,7 +47,7 @@ export default function ImageGallery({ totalGalleryImages }) {
       <Section>
         <Container className="spacing">
           <Grid>
-            {totalGalleryImages.map((image) => {
+            {totalGalleryImages.map((image, index) => {
               return (
                 <Image
                   alt={"galleryImage"}
@@ -55,6 +55,8 @@ export default function ImageGallery({ totalGalleryImages }) {
                   width={600}
                   height={100}
                   objectFit={"cover"}
+                  allImages={totalGalleryImages}
+                  index={index}
                 />
               );
             })}
