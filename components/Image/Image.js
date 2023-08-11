@@ -4,6 +4,8 @@ import styles from "./Image.module.scss";
 import { Lightbox } from "yet-another-react-lightbox";
 import { useState } from "react";
 import "yet-another-react-lightbox/styles.css";
+import Video from "yet-another-react-lightbox/plugins/video";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 const Image = ({
   children,
@@ -20,8 +22,9 @@ const Image = ({
 }) => {
   const imageClassName = new ClassName(styles.image);
   imageClassName.addIf(className, className);
-  const slidesImages = allImages.map(({ sourceUrl }) => ({
+  const slidesImages = allImages.map(({ sourceUrl, title }) => ({
     src: sourceUrl,
+    title: title,
   }));
   const [openLightBox, setOpenLightbox] = useState(false);
   const handleLightBox = () => {
@@ -30,7 +33,7 @@ const Image = ({
   return (
     <>
       <figure className={imageClassName.toString()}>
-        <div onClick={() => handleLightBox()}>
+        <div style={{ cursor: "pointer" }} onClick={() => handleLightBox()}>
           <img
             width={width}
             height={height}
@@ -51,6 +54,7 @@ const Image = ({
       </figure>
       <Lightbox
         index={index}
+        plugins={[Video, Zoom]}
         open={openLightBox}
         close={() => setOpenLightbox(false)}
         slides={slidesImages}
