@@ -6,19 +6,35 @@ import CTAsecondary from "../../components/CTAsecondary";
 import CTA from "../../components/CTA";
 import { Container, Section } from "../../components/layoutComponents";
 import styled from "styled-components";
+import { getGalleryImages } from "../../lib/images";
+import ImageGallery from "../../components/PageComponents/ImageGallery/ImageGallery";
 
 const Text = styled.div`
   max-width: 100ch;
   width: 100%;
 `;
+export async function getStaticProps() {
+  const allGalleryImages = await getGalleryImages();
 
-export default function Gallery() {
+  return {
+    props: {
+      allGalleryImages,
+    },
+  };
+}
+
+export default function Gallery({ allGalleryImages }) {
+  const galleryNode =
+    allGalleryImages?.data?.pages?.edges[0]?.node?.ACF_GalleryPage;
+  const totalGalleryImages = galleryNode?.gallery;
+
   return (
     <LayoutJs>
       <Seo
         title="Gallery | Inner Spirit Photography"
         description="Here is the full gallery of Inner Spirit Photography!"
       />
+
       <BannerSecondary
         img="/banners/gallery-banner.jpg"
         to1="/"
@@ -31,7 +47,9 @@ export default function Gallery() {
         description="Now I know what it feels like to be transformed into pure art!!!"
         name="- Julie K."
       />
+      <ImageGallery totalGalleryImages={totalGalleryImages} />
       <CTAsecondary />
+
       <Section>
         <Container>
           <Text className="spacing">
