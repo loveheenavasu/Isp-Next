@@ -13,7 +13,7 @@ export default function Custom404() {
       <HeroBannerPadding />
       <Section>
         <Container>
-          <h1>404: This page does not exist</h1>
+          <h1>404: This page does not exist.</h1>
         </Container>
       </Section>
     </LayoutJs>
