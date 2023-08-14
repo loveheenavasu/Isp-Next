@@ -34,7 +34,7 @@ export default function Projects({ allProjectsImages }) {
         description="Here is the full gallery of Inner Spirit Photography!"
       />
       <BannerSecondary
-        img="/banners/gallery-banner.jpg"
+        img="/banners/projects-banner.jpg"
         to1="/"
         link1="Home"
         to2="/portfolios"

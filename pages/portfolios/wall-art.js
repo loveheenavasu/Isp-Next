@@ -37,7 +37,7 @@ export default function WallArt({ allWallArtImages }) {
         description="Here is the full gallery of Inner Spirit Photography!"
       />
       <BannerSecondary
-        img="/banners/gallery-banner.jpg"
+        img="/banners/wall-art-banner.jpg"
         to1="/"
         link1="Home"
         to2="/portfolios"
