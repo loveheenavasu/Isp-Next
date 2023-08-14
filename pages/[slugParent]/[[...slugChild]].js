@@ -1,11 +1,6 @@
-import Link from "next/link";
-import { Helmet } from "react-helmet";
-
 import PageComponents from "lib/pageComponents";
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from "lib/pages";
 import LayoutJs from "../../components/layoutJs";
-import Seo from "../../components/seo";
-import styled from "styled-components";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostPage from "../../components/blogPage";
 
@@ -71,22 +66,20 @@ export async function getStaticProps({
   // we can first contruct our URI from the page params
 
   let pageUri = `/${slugParent}/`;
-  let blogSlug = ""
+  let blogSlug = "";
 
   // We only want to apply deeper paths to the URI if we actually have
   // existing children
 
   if (Array.isArray(slugChild) && slugChild.length > 0) {
     pageUri = `${pageUri}${slugChild.join("/")}/`;
-    blogSlug = slugChild[0]
+    blogSlug = slugChild[0];
   }
 
   const { page } = await getPageByUri(pageUri);
   if (!page) {
     const allPosts = await getAllPostsWithSlug();
-    const isBlog = allPosts.edges.find(
-      ({ node }) => node.slug === blogSlug
-    );
+    const isBlog = allPosts.edges.find(({ node }) => node.slug === blogSlug);
     if (!isBlog) {
       return {
         props: {},
@@ -94,11 +87,7 @@ export async function getStaticProps({
       };
     }
 
-    const data = await getPostAndMorePosts(
-      blogSlug,
-      preview,
-      previewData
-    );
+    const data = await getPostAndMorePosts(blogSlug, preview, previewData);
     return {
       props: {
         preview,
